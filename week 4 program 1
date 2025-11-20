@@ -1,0 +1,9 @@
+word=input("Enter a word: ") 
+vowelcount=0 
+for i in word: 
+    if i in ('a,e,i,o,u,A,E,I,O,U'): 
+        vowelcount+=1 
+if vowelcount!=0: 
+    print("Your word contains vowel") 
+else: 
+    print("Your word has only consonants")
