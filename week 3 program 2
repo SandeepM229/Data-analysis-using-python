@@ -1,0 +1,8 @@
+import random 
+num=random.randint(1,10) 
+guess=int(input("Enter any number from 1-10:")) 
+print("Random number generated=",num) 
+if guess==num: 
+    print("The random number and the guess number are same") 
+else: 
+    print("The random number and the guess number are not same")
