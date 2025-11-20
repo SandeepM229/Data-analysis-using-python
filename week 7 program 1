@@ -1,0 +1,8 @@
+def sum_digits(num): 
+    sd=0 
+    while num!=0: 
+        sd=sd+num%10 
+        num=num//10 
+    return sd 
+num=int(input("Enter number: ")) 
+print("Sum of digits of {} is {}".format(num,sum_digits(num)))
