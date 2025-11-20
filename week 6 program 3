@@ -1,3 +1,4 @@
+ i) Create a matrix and print it
 R = int(input("Enter the number of rows:")) 
 C = int(input("Enter the number of columns:")) 
 matrix = [] 
@@ -11,3 +12,77 @@ for i in range(R):
     for j in range(C): 
         print(matrix[i][j], end = " ") 
     print()
+
+ii) Perform Addition of 2 matrices
+R = int(input("Enter the number of rows:")) 
+C = int(input("Enter the number of columns:")) 
+A = [] 
+print("Enter the entries rowwise:") 
+for i in range(R):           
+    a =[] 
+    for j in range(C):       
+         a.append(int(input())) 
+    A.append(a) 
+print("Matrix A:") 
+for i in range(R): 
+    for j in range(C): 
+        print(A[i][j], end = " ") 
+    print() 
+R1 = int(input("Enter the number of rows:")) 
+C1 = int(input("Enter the number of columns:")) 
+B = [] 
+print("Enter the entries rowwise:") 
+for i in range(R1):           
+    b =[] 
+    for j in range(C1):       
+         b.append(int(input())) 
+    B.append(b) 
+print("Matrix B:") 
+for i in range(R1): 
+    for j in range(C1): 
+        print(B[i][j], end = " ") 
+    print()
+add=[] 
+if R==R1 and C==C1: 
+    for i in range(len(A)): 
+        result = [] 
+        for j in range(len(A[0])): 
+            result.append(A[i][j] + B[i][j]) 
+        add.append(result) 
+    print("After addition new matrix is:") 
+    for i in range(R1): 
+        for j in range(C1): 
+            print(add[i][j],end=" ") 
+        print() 
+else: 
+    print("matrix addition not possible")
+
+iii)Perform multiplication of 2 matrices
+print("Enter order of 1st matrix:") 
+m,n = list(map(int,input().split())) 
+print("Enter Row wise values") 
+mat1 = [] 
+for i in range(m) : 
+    print("Enter row",i,"value:") 
+    row = list(map(int,input().split())) 
+    mat1.append(row) 
+print("Enter order of 2nd matrix:") 
+p,q = list(map(int,input().split())) 
+print("Enter Row wise values") 
+mat2 = [] 
+for j in range(p) : 
+    print("Enter row",j,"value:") 
+    row = list(map(int,input().split())) 
+    mat2.append(row) 
+print("Matrix 1:",mat1) 
+23 
+ 
+print("Matrix 2:",mat2) 
+if n==p: 
+    print("After Matrix Multiplication: ") 
+    resultant = [[ sum(ele1*ele2 for ele1,ele2 in zip(row,col)) for col in zip(*mat2) ] for row in mat1 
+] 
+    for row in resultant: 
+        print(row) 
+else: 
+    print("Matrix multiplication not possible")
