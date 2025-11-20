@@ -1,0 +1,14 @@
+n=int(input("Enter number of elements to be insert: ")) 
+eles=[] 
+print("Enter {} elements : ".format(n)) 
+for i in range(n): 
+    eles.append(int(input())) 
+for i in range(n-1): 
+    j=i+1 
+    while j<n: 
+        if eles[i]==eles[j]: 
+            del eles[j] 
+            j-=1 
+            n-=1 
+        j+=1 
+print("After removing duplicates list is",eles)
