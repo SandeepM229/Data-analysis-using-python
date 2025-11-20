@@ -1,0 +1,14 @@
+import random 
+numList=[] 
+for i in range(20): 
+    numList.append(random.randint(1,100)); 
+print("List is :",numList) 
+print("Average is :",sum(numList)/20) 
+print("Largest element is",sorted(numList)[-1],"and smallest element is",sorted(numList)[0]) 
+print("Second largest element is",sorted(numList)[-2],"and second smallest element 
+is",sorted(numList)[1]) 
+count=0 
+for ele in numList: 
+    if ele%2==0: 
+        count+=1 
+print("Total number of even elements are :",count)
